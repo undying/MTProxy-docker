@@ -1,6 +1,6 @@
 
 run: build proxy-secret proxy-multi.conf
-	docker-compose up --build
+	docker-compose up --build -d
 
 build:
 	docker build -t mtproxy .
