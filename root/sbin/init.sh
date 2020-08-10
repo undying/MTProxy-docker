@@ -5,8 +5,8 @@ MTPROXY_WORKERS=${MTPROXY_WORKERS:-${CPU}}
 
 if [[ -z "${MTPROXY_SECRET}" ]];then
   ##MTPROXY_SECRET=$(head -c 16 /dev/urandom | xxd -ps)
-  MTPROXY_SECRET=$(tr -dc 'a-f0-9' < /dev/urandom|head -c30)
-  MTPROXY_SECRET=dd${MTPROXY_SECRET}
+  MTPROXY_SECRET=$(tr -dc 'a-f0-9' < /dev/urandom|head -c32)
+  MTPROXY_SECRET=${MTPROXY_SECRET}
   printf "Proxy Secret: %s\n" "${MTPROXY_SECRET}"
 fi
 
