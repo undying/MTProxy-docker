@@ -1,0 +1,15 @@
+---
+
+version: '3'
+
+services:
+  proxy:
+    build: .
+    ports:
+      - 8888:8888
+      - 1503:1503
+    volumes:
+      - ./proxy-secret:/opt/proxy-secret:ro
+      - ./proxy-multi.conf:/opt/proxy-multi.conf:ro
+
+# vi:syntax=yaml
