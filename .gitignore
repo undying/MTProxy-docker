@@ -1,3 +1,5 @@
 
 *.swp
+proxy-secret
+proxy-multi.conf
 
